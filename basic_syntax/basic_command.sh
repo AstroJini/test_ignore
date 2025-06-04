@@ -22,9 +22,13 @@ git push origin 브랜치명
 # 충돌발생시 충돌무시하고, 로컬기준으로 원격에 덮어쓰기
 git push origin 브랜치명 --force
 
+# 특정 commit ID로의 전환,
+git checkout 커밋ID
+# 특정 branch로의 전환,
+git checkout 브랜치명
 
 
-# pull은 원겨변경사항을 local로 내려받는 것(fetch+merge)
+# pull은 원격변경사항을 local로 내려받는 것(fetch+merge)
 git fetch origin main
 # fetch는 변경사항을 local로 가져오되, 병합은 하지 않는 것
 git fetch --all
@@ -40,3 +44,11 @@ git reset head^
 # 이미 push된 commit사항 되돌리기 (완전한 취소는 아님) commitID생성
 git revert 커밋ID
 
+# 작업중인 사항을 임시 저장하는 것
+git stash
+# 마지막으로 저장한 사항을 꺼내서 적용
+git stash pop
+# 저장한 작업목록 조회
+git stash list
+# 저장 목록 전체 삭제
+git stash clear
