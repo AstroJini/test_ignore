@@ -33,3 +33,10 @@ git diff A B
 git diff commitID1 commitID2
 git diff branch1 branch2
 
+# 가장 최신의 커밋 취소
+git reset head~1
+git reset head^
+
+# 이미 push된 commit사항 되돌리기 (완전한 취소는 아님) commitID생성
+git revert 커밋ID
+
