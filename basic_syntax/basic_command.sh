@@ -21,3 +21,15 @@ git log --oneline
 git push origin 브랜치명
 # 충돌발생시 충돌무시하고, 로컬기준으로 원격에 덮어쓰기
 git push origin 브랜치명 --force
+
+
+
+# pull은 원겨변경사항을 local로 내려받는 것(fetch+merge)
+git fetch origin main
+# fetch는 변경사항을 local로 가져오되, 병합은 하지 않는 것
+git fetch --all
+# 버전별(commit간) 비교 명령어
+git diff A B
+git diff commitID1 commitID2
+git diff branch1 branch2
+
